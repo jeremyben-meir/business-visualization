@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 // import styled, { css } from 'styled-components';
 import ReactMapGL, {Marker, Popup} from "react-map-gl";
-import * as Places from '../../temp_files/map_data/Places.json';
-import {ReactComponent as icon} from '../../temp_files/map_data/Silhouette_of_the_Statue_of_Liberty_in_New_York.svg';
+import * as Places from '../temp_files/map_data/Places.json';
+import {Silhouette_of_the_Statue_of_Liberty_in_New_York as icon} from '../temp_files/map_data/Silhouette_of_the_Statue_of_Liberty_in_New_York.svg';
 
-export default function Map() {
+export function Map() {
   const[viewport, setViewport] = useState({
     latitude: 40.807824,
     longitude: -73.962141,
@@ -52,7 +52,7 @@ export default function Map() {
                 setSelectedPlace(place);
               }}
             >
-              <img src="Silhouette_of_the_Statue_of_Liberty_in_New_York.svg" alt="Icon" />
+              <icon/>
             </button>
           </Marker>
 
@@ -74,3 +74,4 @@ export default function Map() {
     </div>
   );
 }
+
