@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 // import styled, { css } from 'styled-components';
 import ReactMapGL, {Marker, Popup} from "react-map-gl";
-import * as Places from '../temp_files/map_data/Places.json';
-import {Silhouette_of_the_Statue_of_Liberty_in_New_York as icon} from '../temp_files/map_data/Silhouette_of_the_Statue_of_Liberty_in_New_York.svg';
+import * as Places from '../assets/temp_files/map_data/Places.json';
+import {Silhouette_of_the_Statue_of_Liberty_in_New_York as icon} from '../assets/temp_files/map_data/Silhouette_of_the_Statue_of_Liberty_in_New_York.svg';
 
 export function Map() {
   const[viewport, setViewport] = useState({
