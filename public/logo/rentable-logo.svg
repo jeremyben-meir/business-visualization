@@ -1,0 +1,21 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="882.42" height="213.14" viewBox="0 0 882.42 213.14">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #080029;
+      }
+
+      .cls-2 {
+        font-size: 163px;
+        fill: #fff;
+        font-family: JockeyOne-Regular, Jockey One;
+      }
+
+      .cls-3 {
+        letter-spacing: -0.06em;
+      }
+    </style>
+  </defs>
+  <rect class="cls-1" width="882.42" height="208.79"/>
+  <text class="cls-2" transform="translate(141.72 161.15)">REN<tspan class="cls-3" x="233.25" y="0">T</tspan><tspan x="297.31" y="0">ABLE</tspan></text>
+</svg>
