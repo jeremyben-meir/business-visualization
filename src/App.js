@@ -1,37 +1,32 @@
 import './App.css';
-import Home from './views/Home';
-import PopupTest from './views/PopupTest';
 import { BrowserRouter as Router , Switch , Route } from "react-router-dom";
-import React, { Component } from "react";
-import { Provider as StyletronProvider, DebugEngine } from "styletron-react";
-import { Client as Styletron } from "styletron-engine-atomic";
-import { Div, StyleReset, ThemeProvider } from "atomize";
+import React from "react";
 
+import Home from './views/Home';
+import Login from './views/Login';
+import NoMatch from './views/NoMatch';
+import {Layout} from "./components/Layout"
 
-const debug =
-  process.env.NODE_ENV === "production" ? void 0 : new DebugEngine();
-
-// 1. Create a client engine instance
-const engine = new Styletron();
-
-
-const theme = {
-  colors: {
-    black900: "#1d1d1e"
-  }
-};
+import Navbar from './components/Navbar';
+const navlinks = [
+  { name: "Home", to: "/" },
+  { name: "Login", to: "/login" },
+];
+const brand = { name: "peekaboo", to: "home" };
 
 function App() {
   return (
-    <Router>
-    <StyletronProvider value={engine} debug={debug} debugAfterHydration>
-      <ThemeProvider theme={theme}>
-        <StyleReset />
+    <React.Fragment>
+      <Navbar brand={brand} links={navlinks} />
+      
+      <Router>
+        <Switch>
           <Route path="/" exact component={Home}/>
-          <Route path="/test" exact component={PopupTest}/>
-      </ThemeProvider>
-    </StyletronProvider>
-    </Router>
+          <Route path="/login" exact component={Login}/>
+          <Route component={NoMatch}/>
+        </Switch>
+      </Router>
+    </React.Fragment>
   );
 }
 

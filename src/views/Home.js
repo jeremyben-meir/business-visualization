@@ -1,26 +1,33 @@
 import React from 'react';
 import {Map} from '../components/Map.js';
-import { Div, Button, Icon, Dropdown } from "atomize";
+import {HomeForm} from '../components/HomeForm.js';
+import {Layout} from '../components/Layout';
+import {useState,useEffect} from 'react'; 
+import styled, { css } from 'styled-components';
 
 const Home = () => {
 
+  const [zipLocation,setZipLocation] = useState(10025)
+
+  const PushMap = (zipcode) => {
+    console.log(zipcode)
+    setZipLocation(zipcode);
+  }
+
   return (
-    <Div d="flex">
-      <Button
-        h="2.5rem"
-        w="2.5rem"
-        bg="warning700"
-        hoverBg="warning600"
-        rounded="circle"
-        m={{ r: "1rem" }}
-        shadow="2"
-        hoverShadow="4"
-      >
-        <Icon name="Search" size="20px" color="white" />
-        <Dropdown/>
-      </Button>
-    </Div>
+    <>
+      <Map zipLocation={zipLocation}/>
+      <HomeForm PushMap={PushMap}/>
+      <StyledText>
+        <p>wadawdawdawdAbauyawldhab dwa nkefabwj awdjhawbudyawgduiaw dyuawtf dyiawtf dyuawtfd iuwaytdfiuayd fiwaudyg afiudywag dukyawg duwaygduiaygduiawygduiaywgduiwaydguaiw dgwuiad yguaw dguiayg duiawydg uiawdyg uwayg uidy giwuywadawdawdawdAbauyawldhab dwa nkefabwj awdjhawbudyawgduiaw dyuawtf dyiawtf dyuawtfd iuwaytdfiuayd fiwaudyg afiudywag dukyawg duwaygduiaygduiawygduiaywgduiwaydguaiw dgwuiad yguaw dguiayg duiawydg uiawdyg uwayg uidy giwuywadawdawdawdAbauyawldhab dwa nkefabwj awdjhawbudyawgduiaw dyuawtf dyiawtf dyuawtfd iuwaytdfiuayd fiwaudyg afiudywag dukyawg duwaygduiaygduiawygduiaywgduiwaydguaiw dgwuiad yguaw dguiayg duiawydg uiawdyg uwayg uidy giwuywadawdawdawdAbauyawldhab dwa nkefabwj awdjhawbudyawgduiaw dyuawtf dyiawtf dyuawtfd iuwaytdfiuayd fiwaudyg afiudywag dukyawg duwaygduiaygduiawygduiaywgduiwaydguaiw dgwuiad yguaw dguiayg duiawydg uiawdyg uwayg uidy giwuywadawdawdawdAbauyawldhab dwa nkefabwj awdjhawbudyawgduiaw dyuawtf dyiawtf dyuawtfd iuwaytdfiuayd fiwaudyg afiudywag dukyawg duwaygduiaygduiawygduiaywgduiwaydguaiw dgwuiad yguaw dguiayg duiawydg uiawdyg uwayg uidy giwuywadawdawdawdAbauyawldhab dwa nkefabwj awdjhawbudyawgduiaw dyuawtf dyiawtf dyuawtfd iuwaytdfiuayd fiwaudyg afiudywag dukyawg duwaygduiaygduiawygduiaywgduiwaydguaiw dgwuiad yguaw dguiayg duiawydg uiawdyg uwayg uidy giwuywadawdawdawdAbauyawldhab dwa nkefabwj awdjhawbudyawgduiaw dyuawtf dyiawtf dyuawtfd iuwaytdfiuayd fiwaudyg afiudywag dukyawg duwaygduiaygduiawygduiaywgduiwaydguaiw dgwuiad yguaw dguiayg duiawydg uiawdyg uwayg uidy giwuywadawdawdawdAbauyawldhab dwa nkefabwj awdjhawbudyawgduiaw dyuawtf dyiawtf dyuawtfd iuwaytdfiuayd fiwaudyg afiudywag dukyawg duwaygduiaygduiawygduiaywgduiwaydguaiw dgwuiad yguaw dguiayg duiawydg uiawdyg uwayg uidy giwuywadawdawdawdAbauyawldhab dwa nkefabwj awdjhawbudyawgduiaw dyuawtf dyiawtf dyuawtfd iuwaytdfiuayd fiwaudyg afiudywag dukyawg duwaygduiaygduiawygduiaywgduiwaydguaiw dgwuiad yguaw dguiayg duiawydg uiawdyg uwayg uidy giwuy</p>
+      </StyledText>
+    </>
   );
 }
 
 export default Home;
+
+const StyledText = styled.div`
+  background:black;
+  z-index:2;
+`;
