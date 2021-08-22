@@ -17,10 +17,11 @@ export class Map extends React.Component {
   constructor(props){
     super(props)
     this.state = {
-      lat: 40.767824,
+      lat: 40.72796,
       lng: -73.962141,
-      zoom: 12,
+      zoom: 10.5,
       zip: 0,
+      bearing: 10
     };
     mapboxgl.accessToken = process.env.REACT_APP_MAPBOX_TOKEN;
   }
@@ -29,22 +30,12 @@ export class Map extends React.Component {
 
     this.map = new mapboxgl.Map({
       container: this.mapContainer,
-      style: "mapbox://styles/ignaciolg1212/ckjd6c2zaagta19ldtuirqzgn",
+      style: "mapbox://styles/ignaciolg1212/cksmd7dqe2mbo18lorain0i4m",
       center: [this.state.lng, this.state.lat],
-      zoom: this.state.zoom
+      zoom: this.state.zoom,
+      bearing: this.state.bearing
     });
-  //       this.map.once('load', () => {
-  //     this.map.resize();
-  // });
-    this.map.scrollZoom.disable();
-    this.map.dragPan.disable();
-    this.map.on('move', () => {
-      this.setState({
-      lng: this.map.getCenter().lng.toFixed(4),
-      lat: this.map.getCenter().lat.toFixed(4),
-      zoom: this.map.getZoom().toFixed(2)
-      });
-    });
+    
   }
   componentDidUnmount() {
     this.setState({zip:0})
