@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/business-visualization/static/css/main.71003a5a.chunk.css",
+    "main.js": "/business-visualization/static/js/main.76b1a2e2.chunk.js",
+    "main.js.map": "/business-visualization/static/js/main.76b1a2e2.chunk.js.map",
+    "runtime-main.js": "/business-visualization/static/js/runtime-main.18d88875.js",
+    "runtime-main.js.map": "/business-visualization/static/js/runtime-main.18d88875.js.map",
+    "static/js/2.8b59d64e.chunk.js": "/business-visualization/static/js/2.8b59d64e.chunk.js",
+    "static/js/2.8b59d64e.chunk.js.map": "/business-visualization/static/js/2.8b59d64e.chunk.js.map",
+    "static/js/3.7a269d41.chunk.js": "/business-visualization/static/js/3.7a269d41.chunk.js",
+    "static/js/3.7a269d41.chunk.js.map": "/business-visualization/static/js/3.7a269d41.chunk.js.map",
+    "index.html": "/business-visualization/index.html",
+    "static/css/main.71003a5a.chunk.css.map": "/business-visualization/static/css/main.71003a5a.chunk.css.map",
+    "static/js/2.8b59d64e.chunk.js.LICENSE.txt": "/business-visualization/static/js/2.8b59d64e.chunk.js.LICENSE.txt",
+    "static/media/rentable-logo-2-white.2e9de97d.svg": "/business-visualization/static/media/rentable-logo-2-white.2e9de97d.svg",
+    "static/media/rentable-logo-2.8179b410.svg": "/business-visualization/static/media/rentable-logo-2.8179b410.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.18d88875.js",
+    "static/js/2.8b59d64e.chunk.js",
+    "static/css/main.71003a5a.chunk.css",
+    "static/js/main.76b1a2e2.chunk.js"
+  ]
+}
